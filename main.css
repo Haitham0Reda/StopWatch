@@ -71,3 +71,10 @@ button {
 button:not(:last-child) {
     margin-right: 20px;
 }
+
+button:hover,
+button:focus {
+    border-color: #F6B400;
+    color: #F6B400;
+    box-shadow: 0px 4px 27px -12px #F6B400;
+}
