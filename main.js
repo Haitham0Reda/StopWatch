@@ -1,17 +1,27 @@
 
-let minutes = 00;
 let seconds = 00;
 let tens = 00;
 
-let getMinutes = document.querySelector('.minutes');
 let getSeconds = document.querySelector('.seconds');
 let getTens = document.querySelector('.tens');
 let btnStart = document.querySelector('.btn-start');
 let btnStop = document.querySelector('.btn-stop');
 let btnReset = document.querySelector('.btn-reset');
+let interval;
 
 btnStart.addEventListener('click', () => {
-    setInterval(startTimer, 10)
+    interval = setInterval(startTimer, 10)
+})
+
+btnStop.addEventListener('click', () => {
+    clearInterval(interval);
+})
+btnReset.addEventListener('click', () => {
+    clearInterval(interval);
+    tens = '00';
+    seconds = '00';
+    getTens.innerHTML = tens;
+    getSeconds.innerHTML = seconds;
 })
 
 function startTimer() {
@@ -27,5 +37,8 @@ function startTimer() {
         getSeconds.innerHTML = '0' + seconds;
         tens = 0;
         getTens.innerHTML = '0' + 0;
+    }
+    if (seconds > 9) {
+        getSeconds.innerHTML = seconds;
     }
 }
