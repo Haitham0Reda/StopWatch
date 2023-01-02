@@ -11,7 +11,7 @@ let btnStop = document.querySelector('.btn-stop');
 let btnReset = document.querySelector('.btn-reset');
 
 btnStart.addEventListener('click', () => {
-    setInterval(startTimer, 10)
+    setInterval(startTimer, 10);
 })
 
 function startTimer() {
