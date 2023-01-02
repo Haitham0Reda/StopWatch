@@ -16,7 +16,7 @@
 }
 
 .content {
-    position: relative;
+    position: absolute;
     width: 100%;
     top: 50%;
     left: 50%;
@@ -24,12 +24,13 @@
 }
 
 .content p {
-    position: relative;
-    display: inline-block;
-    color: #ffffff;
-    z-index: 9999;
-    font-size: 48px;
     margin-bottom: 120px;
+    font-size: 48px;
+    color: #fff;
+    z-index: 9999;
+    position: absolute;
+    top: -200px;
+    left: 700px;
 }
 
 .content p::before {
